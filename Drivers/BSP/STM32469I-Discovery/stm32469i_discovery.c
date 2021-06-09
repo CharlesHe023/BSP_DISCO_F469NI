@@ -783,7 +783,8 @@ uint8_t AUDIO_IO_Read(uint8_t Addr, uint8_t Reg)
 void AUDIO_IO_Delay(uint32_t Delay)
 {
   //HAL_Delay(Delay);
-  wait_ms(Delay);
+  //wait_ms(Delay);
+  thread_sleep_for(Delay);
 }
 
 /******************************** LINK I2C EEPROM *****************************/
@@ -903,7 +904,8 @@ void TS_IO_WriteMultiple(uint8_t Addr, uint8_t Reg, uint8_t *Buffer, uint16_t Le
 void TS_IO_Delay(uint32_t Delay)
 {
   //HAL_Delay(Delay);
-  wait_ms(Delay);
+  //wait_ms(Delay);
+  thread_sleep_for(Delay);
 }
 
 /**************************** LINK OTM8009A (Display driver) ******************/
@@ -914,7 +916,8 @@ void TS_IO_Delay(uint32_t Delay)
 void OTM8009A_IO_Delay(uint32_t Delay)
 {
   //HAL_Delay(Delay);
-  wait_ms(Delay);
+  //wait_ms(Delay);
+  thread_sleep_for(Delay);
 }
 
 /**

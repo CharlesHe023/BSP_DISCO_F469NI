@@ -418,14 +418,16 @@ void BSP_LCD_Reset(void)
     HAL_GPIO_WritePin(GPIOH, GPIO_PIN_7, GPIO_PIN_RESET);
 
     //HAL_Delay(20); /* wait 20 ms */
-    wait_ms(20);
+    //wait_ms(20);
+    thread_sleep_for(10);
   
     /* Desactivate XRES */
     HAL_GPIO_WritePin(GPIOH, GPIO_PIN_7, GPIO_PIN_SET);
     
     /* Wait for 10ms after releasing XRES before sending commands */
     //HAL_Delay(10);
-    wait_ms(10);    
+    //wait_ms(10);    
+    thread_sleep_for(10);
 #else
   
 #endif /* USE_STM32469I_DISCO_REVA == 0 */
